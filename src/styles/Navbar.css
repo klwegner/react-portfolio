@@ -20,6 +20,12 @@ nav {
     width:20%;
 }
 
+/* below is not functioning */
+.LogoAndName a{
+    font-style: none;
+
+}
+
 h1 {
     margin-left: 2%;
 }

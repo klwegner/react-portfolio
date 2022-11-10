@@ -1,6 +1,7 @@
 import '../styles/Home.css';
 import me from '../assets/IMG_9619.jpg';
 
+
 const Home = () => {
 
     
