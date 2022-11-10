@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    background-color: rgba(222, 220, 211, 0.7);
+    border: 1px solid black;
+}
+
+.LogoAndName img{
+    height:40px;
+    width: 40px;  
+}
+.LogoAndName {
+    display: flex;
+    width:20%;
+}
+
+h1 {
+    margin-left: 2%;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+}
