@@ -1,0 +1,17 @@
+.links{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.square {
+    width:25em;
+    height:25em;
+    background-color: rgba(222, 220, 211, 0.7);
+    padding: 1em;
+margin: 1em 0;
+}
+
+.description{
+    align-content: center;
+}

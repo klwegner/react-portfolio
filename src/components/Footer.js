@@ -1,11 +1,13 @@
 import '../styles/Footer.css';
 
 const Footer = () =>{
+const currYear = new Date().getFullYear();
+
     return (
         <footer>
         <div className="footer1">
         <div>   
-                 <p>Webpage Coded by Kristen Wegner Nov. 2022.</p>
+                 <p>Created by Kristen Wegner. Updated {currYear} </p>
 </div>
           <div>
           <p>Letter K Icon by <a href="https://www.flaticon.com/free-icons/letter-k" title="letter k icons">Roundicons Premium - Flaticon</a></p>.

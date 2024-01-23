@@ -1,9 +1,12 @@
+import '../styles/Contact.css'
+
 const ContactMe = () => {
     return(
-<>
+        <>
         <h1>Contact Me</h1>
+        <div className="contactInfo">
         <h2>
-        
+
         <a href="mailto:klwegner@gmail.com?subject=Interested in Your Portfolio">Email</a>
         </h2>
         <h2>
@@ -12,6 +15,7 @@ const ContactMe = () => {
         <h2>
         <a href="https://github.com/klwegner">GitHub</a>
         </h2>
+</div>
 </>
     )
 }

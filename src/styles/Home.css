@@ -28,3 +28,9 @@
     width:50%;
     border: 1px solid black;
 }
+
+.opaque-block {
+    background-color: rgba(222, 220, 211, 0.9);
+    color: black;
+
+}

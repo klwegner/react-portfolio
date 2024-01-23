@@ -1,14 +1,16 @@
+import '../styles/Projects.css'
+
 const Projects = () => {
   return (
     <>
-      <h1 className="centered">Projects</h1>
+      <h1>Projects</h1>
       <div className="links">
         <div className="square">
           <div className="square2">
-            <a href="https://klwegner.github.io/The-Juniper-Tree/?fbclid=IwAR1euVrSYVqywGA2NIvYLnzGSb0I_gH8R6kCNGnMkxled4jVAXDkXOM45D4">
+            <h2><a href="https://klwegner.github.io/The-Juniper-Tree/?fbclid=IwAR1euVrSYVqywGA2NIvYLnzGSb0I_gH8R6kCNGnMkxled4jVAXDkXOM45D4">
               The Juniper Tree
-            </a>
-            <p>
+            </a></h2>
+            <p className='description'>
               A simple game that combines vanilla JS with one of my other loves,
               literature.
               <br />
@@ -24,8 +26,10 @@ const Projects = () => {
 
         <div className="square">
           <div className="square2">
+          <h2>
             <a href="https://cringeapp.herokuapp.com/">Cringe App</a>
-            <p>
+            </h2>
+            <p className='description'>
               {" "}
               Cringe is a social media-style app dedicated to compiling "cringe"
               pictures. <br />
@@ -44,11 +48,12 @@ const Projects = () => {
 
         <div className="square">
           <div className="square2">
+          <h2>
             <a href="https://main--gilded-profiterole-8a135b.netlify.app/">
               Under the Sun
             </a>
-
-            <p>
+</h2>
+            <p className='description'>
               {" "}
               Under the Sun is made with the MERN stack and experiments with the
               Google Maps API.
@@ -62,10 +67,12 @@ const Projects = () => {
 
         <div className="square">
           <div className="square2">
+          <h2>
             <a href="https://63190e9225a5880008a0aad6--singular-puffpuff-40df06.netlify.app/">
               Muzak Player
             </a>
-            <p>
+            </h2>
+            <p className='description'>
               {" "}
               A simple React music player with audio controls. <br />
               <br />I utilized both Bootstrap 4 and MUI when styling this site

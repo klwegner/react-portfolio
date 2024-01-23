@@ -1,0 +1,29 @@
+.emailForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+.textAndButtons{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.buttons input {
+    margin: 1em;
+
+}
+.nameEmail{
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+}

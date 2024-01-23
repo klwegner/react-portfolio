@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.aboutMe{
+    margin-left:2em;
+
+
+}
+
+.aboutMe h1{
+    margin-left: 0;
+}
+
+.aboutMe .para{
+margin-left: 2em;
+width:33%;
+}
+
+.indent{
+    margin-left: 2em;
+}
+
+.uberSection{
+    color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

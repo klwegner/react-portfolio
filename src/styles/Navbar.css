@@ -12,19 +12,20 @@ nav {
 }
 
 .LogoAndName img{
-    height:40px;
-    width: 40px;  
+    height:4em;
+    width: 4em;  
+    margin-right:1em;
 }
 .LogoAndName {
     display: flex;
-    width:20%;
+    flex-direction: row;
+    align-items: center;
 }
 
-/* below is not functioning */
-.LogoAndName a{
-    font-style: none;
-
+.LogoAndName h2{
+    margin: 0;
 }
+
 
 h1 {
     margin-left: 2%;
@@ -35,4 +36,8 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     width: 25%;
+    align-items: center;
+    font-style: none;
+
 }
+
