@@ -1,4 +1,12 @@
 .contactInfo{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+.contactInfo h2 {
+    margin: 0 2em;
+
+}
+h1{
+    display: flex;
+justify-content: center;
 }

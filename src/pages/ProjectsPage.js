@@ -1,5 +1,6 @@
-import "../styles/AboutMe.css"
 import * as React from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 //import CameraIcon from '@mui/icons-material/PhotoCamera';
@@ -21,15 +22,48 @@ import muzak from '../assets/muzak.png';
 import underTheSun from '../assets/UndertheSun.png';
 import cringe from '../assets/cringe.png';
 
-const AboutMe = () => {
 
 
 
+const cards = [
+    {
+        id: 1,
+        name: "The Juniper Tree",
+        description: "A simple game that combines vanilla JS with my love, literature. Inspired by the classic Brothers Grimm fairytale \"The Juniper Tree,\" you must avenge your death at the hands of your twisted stepmother. Warning: not optimized for small screens.",
+        imageSrc: juniperTree,
+        link: "https://klwegner.github.io/The-Juniper-Tree/"
+    },
+    {
+        id:2,
+        name: "Cringe App",
+        description: "Cringe is a social media-style app dedicated to compiling \"cringe\" pictures. Cringe is made with HTML, CSS, Handlebars, and NodeJs and features CRUD capabilities. Finding ridiculous posts on social media is a common pastime. I wanted to build a site that could host a slew of them for easy access!",
+        imageSrc: cringe,
+        link: ""
 
+    },
+    {
+        id:3,
+        name: "Under the Sun",
+        description: "Under the Sun is made with the MERN stack and experiments with the Google Maps API. With it, users list and update places to go and things to do while visiting.",
+        imageSrc: underTheSun,
+        link: "https://main--gilded-profiterole-8a135b.netlify.app/"
 
+    },
+    {
+        id:4,
+        name: "Muzak Player",
+        description: "A simple React music player with audio controls. I utilized both Bootstrap 4 and MUI when styling this site and experimented with animate css.",
+        imageSrc: muzak,
+        link: "https://kristenmuzakplayer.netlify.app/"
 
+    }
+]
+
+const ProjectsPage = () => {
+    const navigate = useNavigate();
 
   return (
+    // <ThemeProvider theme={defaultTheme}>
     <>
       {/* <CssBaseline /> */}
       <main>
@@ -49,26 +83,35 @@ const AboutMe = () => {
               color="text.primary"
               gutterBottom
             >
-About Me
+My Projects
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-
-
-        I believe in the power that coding holds to make our lives richer,
-        healthier, and happier. Working in higher education, I see 
-        how quality web development and skillful integrations between
-        SaaS providers makes clear the way to focus on what really matters: learning.  
-
-
+              JavaScript is my first language, and the one used in these projects. 
+              You will find that several utilize React and various libraries for styling.
             </Typography>
+            <Stack
+              sx={{ pt: 4 }}
+              direction="row"
+              spacing={2}
+              justifyContent="center"
+            >
+                        
+
+                        <Button variant="contained" onClick={() =>{
+                            navigate('/contact')
+                        }} >Contact Information</Button>
+                        <Button variant="outlined" onClick = {() =>{
+                            navigate('/experience')
+                            }}>My Work Experience</Button>
+            </Stack>
           </Container>
         </Box>
 
 
         {/* START CARDS */}
 
-        {/* <Container sx={{ py: 8 }} maxWidth="md">
-
+        <Container sx={{ py: 8 }} maxWidth="md">
+          {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
@@ -93,85 +136,18 @@ About Me
                   </CardContent>
                   <CardActions>
                    <a href = {card.link}> <Button size="small">View Project</Button> </a>
+                    {/* <Button size="small">Edit</Button> */}
                   </CardActions>
                 </Card>
               </Grid>
             ))}
           </Grid>
-        </Container> */}
+        </Container>
       </main>
+    {/* </ThemeProvider> */}
 
     </>
   );
-
-
-
-
-
-
-
-
-  return (
-    <div className="aboutMe">
-    <div className="uberSection">
-
-<div className="section">
-      <h2>About Me</h2>
-      <p className="para">
-        <em>I have always held a wild desire to learn and use what I know to help
-        others.</em> Working as an educator and freelance content writer in the 21st
-        century allowed me plenty of opportunity to utilize technology to do both,
-        but...
-      </p>
-
-      <p className="para">
-        I soon found that I wanted to learn how to <em>create</em> the technology I relied upon. Thus,
-        learning web development became a natural next step. I enrolled in
-        Ironhack's web development course and, months later, got my first job in web development in higher education,
-        and never looked back.
-      </p>
-
-      <p className="para">
-        <em>I believe in the power that coding holds to make our lives richer,
-        healthier, and happier.</em> Working in higher education, I see 
-        how quality web development and skillful integrations between
-        SaaS providers enriches and betters our lives. 
-      </p>
-
-      <p className="para">And I intend to keep building the breadth and depth of my knowledge to do even more!</p>
-</div>
-
-
-      <div className="section">
-        <h2>Experience With:</h2>
-        <ul className="indent">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>NodeJS</li>
-          <li>React</li>
-          <li>Handlebars</li>
-          <li>Bootstrap</li>
-          <li>Material UI</li>
-          <li>Angular</li>
-          <li>Apex</li>
-        </ul>
-      </div>
-      <div className="section">
-        <h2>Skilled In:</h2>
-        <ul className="indent">
-          <li>Collaboration</li>
-          <li>Customer Service</li>
-          <li>Conflict Resolution</li>
-          <li>Verbal and Written Communication</li>
-          <li>Problem-Solving</li>
-          <li>Instructing and Presenting</li>
-          <li>Content Writing</li>
-        </ul>
-      </div>
-</div>
-    </div>
-
-  );
 };
 
-export default AboutMe;
+export default ProjectsPage;

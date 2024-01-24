@@ -1,4 +1,5 @@
 import '../styles/Footer.css';
+import ContactMe from './ContactMe';
 
 const Footer = () =>{
 const currYear = new Date().getFullYear();
@@ -6,6 +7,7 @@ const currYear = new Date().getFullYear();
     return (
         <footer>
         <div className="footer1">
+        <ContactMe/>
         <div>   
                  <p>Created by Kristen Wegner. Updated {currYear} </p>
 </div>
