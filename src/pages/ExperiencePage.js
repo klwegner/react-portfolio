@@ -26,6 +26,8 @@ const style = {
     // width: '80%',
     display: 'flex',
     justifyContent: 'center',
+    width: '100%'
+
   }
 
 const ExperiencePage = () => {
@@ -58,7 +60,7 @@ Experience            </Typography>
           </Container>
         </Box>
 
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8, maxWidth:'80vw'}}>
 
              <Box sx={style2}>
         
@@ -66,7 +68,7 @@ Experience            </Typography>
               <ListItem>
                 <ListItemText primary={<Typography variant="h4">Application Developer/Web Analyst, Hillsborough Community College</Typography>}/>
               </ListItem>
-              <Typography variant="h5"><ul> 12/2022 - Present</ul></Typography>
+              <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul> 12/2022 - Present</ul></Typography>
               <Typography variant="h5"><ul> Angular, Apex, REST APIs, Azure Services, SharePoint</ul></Typography>
 
               <Divider variant="inset" component="li" />

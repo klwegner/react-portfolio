@@ -9,22 +9,21 @@ import Divider from '@mui/material/Divider';
 
 
 const style = {
-    py: 0,
-    width: '100%',
-    maxWidth: '90%',
-    borderRadius: 2,
-    border: '1px solid',
-    borderColor: 'divider',
-    backgroundColor: 'background.paper',
-    
+  py: 0,
+  width: '100%',
+  maxWidth: '90%',
+  borderRadius: 2,
+  border: '1px solid',
+  borderColor: 'divider',
+  backgroundColor: 'background.paper',
   };
 
   const style2= {
-     //p: 2,
+     p: 2,
     // width: '80%',
     display: 'flex',
     justifyContent: 'center',
-    width: '80vw'
+    width: '100%'
   }
 
 
@@ -56,38 +55,44 @@ Education            </Typography>
           </Container>
         </Box>
 
-        <Container sx={{ py: 8 }} maxWidth="md">
-        <Container  maxWidth="md">
-
+        <Container sx={{ py: 8, maxWidth:'80vw'}}>
 
         <Box sx={style2}>
 
 <List sx={style}>
   <ListItem>
-  <ListItemText primary={<Typography variant="h4">A.S. in Computer Science, Hillsborough Community College, in progress</Typography>} />
+  <ListItemText primary={<Typography variant="h4">A.S. in Computer Science, Hillsborough Community College</Typography>} />
   </ListItem>
+  <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>In progress</ul></Typography>
+
   <Typography variant="h5"><ul> Programming Logic, Java, AI</ul></Typography>
 
   <Divider variant="inset" component="li" />
 
 
   <ListItem>
-    <ListItemText  primary={<Typography variant="h4">EdX Certificate, Completed Jul. 2023</Typography>} />
+    <ListItemText  primary={<Typography variant="h4">EdX Certificate</Typography>} />
   </ListItem>
+  <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>Completed Jul. 2023</ul></Typography>
+
   <Typography variant="h5"><ul> Introduction to Python</ul></Typography>
 
   <Divider variant="inset" component="li" />
 
   <ListItem>
-    <ListItemText primary={<Typography variant="h4">Full-Stack Web Development Bootcamp, Ironhack, Completed Aug. 2022</Typography>} />
+    <ListItemText primary={<Typography variant="h4">Full-Stack Web Development Bootcamp, Ironhack</Typography>} />
    
   </ListItem>
+  <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>Completed Aug. 2022</ul></Typography>
+
   <Typography variant="h5"> <ul> React, Node, Express, MongoDB, HTML, CSS</ul></Typography>
 
   <Divider variant="inset" component="li" />
   <ListItem>
-    <ListItemText primary={<Typography variant="h4">B.A. in English Literature, University of South Florida, Completed Dec. 2016</Typography>} />
+    <ListItemText primary={<Typography variant="h4">B.A. in English Literature, University of South Florida</Typography>} />
   </ListItem>
+  <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>Completed Dec. 2016</ul></Typography>
+
   <Divider variant="inset" component="li" />
 </List>
 </Box>

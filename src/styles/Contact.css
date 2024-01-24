@@ -1,11 +1,13 @@
 .contactInfo{
     display: flex;
     justify-content: center;
-}
-.contactInfo h2 {
-    margin: 0 2em;
 
 }
+.contactInfo a{
+    margin: 1em;
+
+}
+
 h1{
     display: flex;
 justify-content: center;

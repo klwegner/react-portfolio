@@ -145,9 +145,8 @@ return (
     </Container>
   </AppBar>
 );
-}
 
-
+          };
 
 
 export default Navbar;

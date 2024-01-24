@@ -97,7 +97,7 @@ Feel inspired to reach out? Please do so below.             </Typography>
         />
         </div>
 
-          <Stack direction="row" spacing={2} justifyContent= "center">
+          <Stack direction="row" spacing={2} justifyContent= "center" sx={{ m: 2}}>
 <Button variant="contained" endIcon={<SendIcon />} type="submit" name="submit">
   Send
 </Button>
