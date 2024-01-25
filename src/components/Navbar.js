@@ -14,7 +14,6 @@ import AdbIcon from '@mui/icons-material/Adb';
 import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 // import Logo from '../assets/letter-k.png';
-import '../styles/Navbar.css';
 
 
 
@@ -46,8 +45,8 @@ const Navbar = () => {
 
 
 return (
-  <AppBar position="static">
-    <Container maxWidth="xl">
+  <AppBar position="static" sx={{bgcolor:'#7D9D9C'}}>
+    <Container maxWidth="xl" >
       <Toolbar disableGutters>
         <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
         <Typography

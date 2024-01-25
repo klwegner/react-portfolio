@@ -70,7 +70,7 @@ const ProjectsPage = () => {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'background.paper',
+            bgcolor: '#E4DCCF',
             pt: 8,
             pb: 6,
           }}
@@ -80,7 +80,7 @@ const ProjectsPage = () => {
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color="#576F72"
               gutterBottom
             >
 My Projects
@@ -97,10 +97,10 @@ My Projects
             >
                         
 
-                        <Button variant="contained" onClick={() =>{
+                        <Button variant="contained" sx={{bgcolor:'#576F72'}} onClick={() =>{
                             navigate('/contact')
                         }} >Contact Information</Button>
-                        <Button variant="outlined" onClick = {() =>{
+                        <Button variant="outlined" sx={{bgcolor:'#7D9D9C', color:'white'}} onClick = {() =>{
                             navigate('/experience')
                             }}>My Work Experience</Button>
             </Stack>
@@ -116,7 +116,7 @@ My Projects
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor:'#E4DCCF' }}
                 >
                   <CardMedia
                     component="div"
@@ -127,7 +127,7 @@ My Projects
                     image={card.imageSrc}
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h5" component="h2" color="#576F72">
                       {card.name}
                     </Typography>
                     <Typography>
@@ -135,7 +135,7 @@ My Projects
                     </Typography>
                   </CardContent>
                   <CardActions>
-                   <a href = {card.link}> <Button size="small">View Project</Button> </a>
+                   <a href = {card.link}> <Button size="small" sx={{color:'#576F72'}}>View Project</Button> </a>
                     {/* <Button size="small">Edit</Button> */}
                   </CardActions>
                 </Card>
