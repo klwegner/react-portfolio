@@ -8,7 +8,6 @@ const AboutMe = () => {
 
   return (
     <>
-      {/* <CssBaseline /> */}
       <main>
         {/* Hero unit */}
         <Box
@@ -28,11 +27,11 @@ const AboutMe = () => {
             >
 About Me
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h5" align="center" color="#576F72" paragraph>
 
 
-        I believe in the power that coding holds to make our lives richer,
-        healthier, and happier. Working in higher education, I see 
+        My name is Kristen Wegner, and I believe in the power that coding holds: the power to make our lives richer,
+        healthier, and happier. Working as a web developer in higher education, I see 
         how quality web development and skillful integrations between
         SaaS providers makes clear the way to focus on what really matters: learning.  
 

@@ -10,12 +10,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import CodeIcon from '@mui/icons-material/Code';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
-// import Logo from '../assets/letter-k.png';
-
-
 
 const pages = [
     {
@@ -40,9 +36,17 @@ const pages = [
     }
 ];
 
-
 const Navbar = () => {
 
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
 return (
   <AppBar position="static" sx={{bgcolor:'#7D9D9C'}}>
@@ -57,7 +61,7 @@ return (
           sx={{
             mr: 2,
             display: { xs: 'none', md: 'flex' },
-            fontFamily: 'monospace',
+            // fontFamily: 'monospace',
             fontWeight: 700,
             letterSpacing: '.3rem',
             color: 'inherit',
@@ -75,42 +79,44 @@ return (
             aria-label="account of current user"
             aria-controls="menu-appbar"
             aria-haspopup="true"
-            // onClick={handleOpenNavMenu}
+             onClick={handleOpenNavMenu}
             color="inherit"
           >
             <MenuIcon />
           </IconButton>
           <Menu
-            id="menu-appbar"
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-
-            sx={{
-              display: { xs: 'block', md: 'none' },
-            }}
-          >
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
             {pages.map((page) => (
               <MenuItem key={page.name}>
-<Link to={page.linkTo}>
-                <Typography textAlign="center">{page.name}</Typography>
+              <Link to={page.linkTo}>
+                <Typography textAlign="center" >{page.name}</Typography>
                 </Link>
               </MenuItem>
             ))}
           </Menu>
         </Box>
-        <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+        <CodeIcon sx={{ display: 'none', mr: 1 }} />
         <Typography
           variant="h5"
           noWrap
           component="a"
-          href="#app-bar-with-responsive-menu"
+          href="/"
           sx={{
             mr: 2,
             display: { xs: 'flex', md: 'none' },
@@ -124,7 +130,8 @@ return (
         >
           Kristen Wegner
         </Typography>
-        <CodeOffIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+        <CodeOffIcon sx={{ display: 'none', mr: 1 }} />
+
 
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
@@ -132,7 +139,7 @@ return (
 
             <Button
               key={page.name}
-            //   onClick={handleCloseNavMenu}
+            onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               {page.name}
@@ -144,8 +151,6 @@ return (
     </Container>
   </AppBar>
 );
-
           };
-
 
 export default Navbar;

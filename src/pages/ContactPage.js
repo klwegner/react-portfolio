@@ -36,7 +36,7 @@ let subjectLine = "Let's Connect!"
 
 <Box
   sx={{
-    bgcolor: 'background.paper',
+    bgcolor: '#E4DCCF',
     pt: 8,
     pb: 6,
   }}
@@ -65,7 +65,10 @@ Feel inspired to reach out? Please do so below.             </Typography>
           <TextField
           label="Your Name"
           id="outlined-start-adornment"
-          sx={{ m: 1, width: '25vw'}}
+          sx={{ m: 1, width: {
+      xs: '50vw', // for screens smaller than 600px
+      sm: '25vw' // for screens 600px and larger
+    }}}
           InputProps={{
             startAdornment: <InputAdornment position="start"> Name</InputAdornment>,
           }}
@@ -74,10 +77,13 @@ Feel inspired to reach out? Please do so below.             </Typography>
           </div>
           <div className="nameEmail" >
             
-          <TextField 
-          label="Your Email"
+          <TextField
+          label="Your Name"
           id="outlined-start-adornment"
-          sx={{ m: 1, width: '25vw'}}
+          sx={{ m: 1, width: {
+      xs: '50vw', // for screens smaller than 600px
+      sm: '25vw' // for screens 600px and larger
+    }}}
           InputProps={{
             startAdornment: <InputAdornment position="start">Email</InputAdornment>,
           }}
@@ -93,11 +99,17 @@ Feel inspired to reach out? Please do so below.             </Typography>
           multiline
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          sx={{ m: 2, width: '50vw'}}
+          sx={{ m: 2, width: {
+      xs: '80vw', // for screens smaller than 600px
+      sm: '50vw' // for screens 600px and larger
+    }}}
         />
         </div>
 
-          <Stack direction="row" spacing={2} justifyContent= "center" sx={{ m: 2}}>
+          <Stack direction="row" spacing={2} justifyContent= "center" sx={{ m:2,   paddingBottom: {
+    xs: '20vw', // for screens smaller than 600px
+    sm: '10vw', // for screens 600px and larger
+  }}}>
 <Button variant="contained" endIcon={<SendIcon />} type="submit" name="submit">
   Send
 </Button>

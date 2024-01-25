@@ -18,16 +18,19 @@ const style = {
   borderRadius: 2,
   border: '1px solid',
   borderColor: 'divider',
-  backgroundColor: 'background.paper',
+  backgroundColor: '#F0EBE3', //main color
   };
 
   const style2= {
      p: 2,
-    // width: '80%',
+backgroundColor:'#E4DCCF', //creamish green
     display: 'flex',
     justifyContent: 'center',
-    width: '100%'
-
+    width: '100%',
+    marginBottom: {
+      xs: '20vw', // for screens smaller than 600px
+      sm: '10vw', // for screens 600px and larger
+    }
   }
 
 const ExperiencePage = () => {
@@ -40,7 +43,7 @@ const ExperiencePage = () => {
         {/* Hero unit */}
         <Box
           sx={{
-            bgcolor: 'background.paper',
+            bgcolor: '#E4DCCF',
             pt: 8,
             pb: 6,
           }}
@@ -50,11 +53,11 @@ const ExperiencePage = () => {
               component="h1"
               variant="h2"
               align="center"
-              color="text.primary"
+              color="#576F72"
               gutterBottom
             >
 Experience            </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h5" align="center" color="#576F72" paragraph>
               My education has been very eclectic and helped shape my flexibility as a developer today. Studying English taught me how to communicate effectively and efficiently; studying coding taught me how to craft the apps and integrations I do today!
             </Typography>
           </Container>

@@ -1,22 +1,15 @@
 import * as React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-
-import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
-//import CameraIcon from '@mui/icons-material/PhotoCamera';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import juniperTree from '../assets/theJuniperTree.png';
 import muzak from '../assets/muzak.png';
 import underTheSun from '../assets/UndertheSun.png';
@@ -63,9 +56,7 @@ const ProjectsPage = () => {
     const navigate = useNavigate();
 
   return (
-    // <ThemeProvider theme={defaultTheme}>
     <>
-      {/* <CssBaseline /> */}
       <main>
         {/* Hero unit */}
         <Box
@@ -110,7 +101,10 @@ My Projects
 
         {/* START CARDS */}
 
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8,     marginBottom: {
+      xs: '20vw', // for screens smaller than 600px
+      sm: '10vw', // for screens 600px and larger
+    }}} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (

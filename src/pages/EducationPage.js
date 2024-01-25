@@ -23,7 +23,11 @@ const style = {
 backgroundColor:'#E4DCCF', //creamish green
     display: 'flex',
     justifyContent: 'center',
-    width: '100%'
+    width: '100%',
+    marginBottom: {
+      xs: '20vw', // for screens smaller than 600px
+      sm: '10vw', // for screens 600px and larger
+    }
   }
 
 

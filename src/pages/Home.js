@@ -3,6 +3,8 @@ import me from '../assets/IMG_9619.jpg';
 import underTheSun from '../assets/UndertheSun.png';
 import muzak from '../assets/muzak.png';
 import cringe from '../assets/cringe.png';
+import Typography from '@mui/material/Typography';
+
 
 
 const Home = () => {
@@ -12,12 +14,29 @@ const Home = () => {
 <div id="homePage">
 <div className="intro">
 <img src={me} alt="Kristen"/>
-    <h1>Kristen Wegner</h1>
-    <h2>Full-Stack Web Developer</h2>
-    <p>MERN & MEAN</p>
+<Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="#576F72"
+              // gutterBottom
+            >Kristen Wegner</Typography>
+         
+
+         <Typography variant="h5" align="center" color="#576F72" paragraph sx={{marginBottom:0}}>Full-Stack Web Developer</Typography>
+
+         <Typography align="center" color="#576F72" paragraph>MERN & MEAN</Typography>
+
 </div>
 
 <div className="projectCarousel">
+<Typography
+              component="h1"
+              variant="h3"
+              align="center"
+              color="#576F72"
+              gutterBottom
+            >My Projects</Typography>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
