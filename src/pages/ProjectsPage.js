@@ -14,6 +14,7 @@ import juniperTree from '../assets/theJuniperTree.png';
 import muzak from '../assets/muzak.png';
 import underTheSun from '../assets/UndertheSun.png';
 import cringe from '../assets/cringe.png';
+import realEstateAoo from '../assets/realEstateApp.png';
 
 
 
@@ -49,7 +50,14 @@ const cards = [
         imageSrc: muzak,
         link: "https://kristenmuzakplayer.netlify.app/"
 
-    }
+    },
+    {
+      id:5,
+      name: "Unlock Tampa Bay",
+      description:"A site to help people seeking housing find the best rental or property to purchase in Tampa Bay. Allows users to upload details of the property and handle image upload through Cloudinary. Users can edit and delete their own postings. This site was built with next.js, styled with Chakra-UI, and hosted on Vercel (front-end) and Render (back-end)." ,
+      imgSrc: realEstateAoo,
+      link: "https://real-estate-app-project-v2-i2wr6gn2r-klwegners-projects.vercel.app/"
+   }
 ]
 
 const ProjectsPage = () => {
@@ -76,7 +84,11 @@ const ProjectsPage = () => {
             >
 My Projects
             </Typography>
-            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            <Typography variant="h5" align="center" color="text.secondary" paragraph
+                    sx={{
+        display: { xs: 'none'}
+      }}
+            >
               JavaScript is my first language, and the one used in these projects. 
               You will find that several utilize React and various libraries for styling.
             </Typography>

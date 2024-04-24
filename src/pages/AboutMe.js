@@ -15,7 +15,9 @@ const AboutMe = () => {
             bgcolor: '#E4DCCF',
             pt: 8,
             pb: 6,
-          }}
+            marginBottom: {
+      xs: '25vw' // for screens smaller than 600px
+    }}}
         >
           <Container maxWidth="sm">
             <Typography

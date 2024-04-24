@@ -4,6 +4,9 @@ import underTheSun from '../assets/UndertheSun.png';
 import muzak from '../assets/muzak.png';
 import cringe from '../assets/cringe.png';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import realEstateApp from '../assets/realEstateApp.png';
+
 
 
 
@@ -11,7 +14,27 @@ const Home = () => {
 
     
     return (
-<div id="homePage">
+
+      <Container 
+      // maxWidth="sm"  
+      sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', md: 'row' },
+        justifyContent: 'space-between',
+        width: '90%',
+        height: '90%',
+        margin: '5%',
+        '@media (max-width:600px)': {
+          justifyContent: 'center',
+        },
+        marginBottom: {
+      xs: '25vw' // for screens smaller than 600px
+    }
+      }}>
+     
+
+
+{/* <div id="homePage"> */}
 <div className="intro">
 <img src={me} alt="Kristen"/>
 <Typography
@@ -19,11 +42,17 @@ const Home = () => {
               variant="h2"
               align="center"
               color="#576F72"
-              // gutterBottom
+              sx={{fontSize: {
+          xs: 'h3.fontSize'
+        }}}
             >Kristen Wegner</Typography>
          
 
-         <Typography variant="h5" align="center" color="#576F72" paragraph sx={{marginBottom:0}}>Full-Stack Web Developer</Typography>
+         <Typography variant="h5" 
+         align="center" 
+         color="#576F72" 
+         paragraph 
+         sx={{marginBottom:0}}>Full-Stack Web Developer</Typography>
 
          <Typography align="center" color="#576F72" paragraph>MERN & MEAN</Typography>
 
@@ -34,8 +63,12 @@ const Home = () => {
               component="h1"
               variant="h3"
               align="center"
-              color="#576F72"
-              gutterBottom
+              sx={{
+        color: '#576F72',
+        fontSize: {
+          xs: 'h4.fontSize'
+                  },
+      }}              gutterBottom
             >My Projects</Typography>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -71,6 +104,16 @@ MERN stack app to keep track of places to visit and things to do. Mobile-friendl
       </div>
     </div>
   </div>
+  <div class="carousel-item">
+      <img src={realEstateApp} class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block opaque-block">
+        <h5>Unlock Tampa Bay</h5>
+        <p>
+        A site made for users to submit properties for sale and for rent. Allows users to edit and delete their own properties for full CRUD.
+        </p>
+      </div>
+    </div>
+  </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     {/* <span class="visually-hidden">Previous</span> */}
@@ -81,8 +124,8 @@ MERN stack app to keep track of places to visit and things to do. Mobile-friendl
   </button>
 </div>
 </div>
-</div>
-
+{/* </div> */}
+ </Container>
     )
 }
 export default Home;

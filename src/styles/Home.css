@@ -9,7 +9,7 @@
     height:90%;
     margin:5%;
     justify-content: space-between;
-    font-family: "Quicksand", sans-serif;
+    /* font-family: "Quicksand", sans-serif; */
     font-weight: 400;
   
 }
@@ -34,4 +34,30 @@
     background-color: rgba(222, 220, 211, 0.9);
     color: black;
 
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #homePage {
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+    }
+    .projectCarousel {
+        /* try below */
+        width:80%;
+        margin: 0 10%;
+        /* border: 1px solid black; */
+    }
+
+    .intro img{
+        width:40vw;
+        height:auto;
+        border-radius: 50%;
+    }
+    .intro {
+        width: 80%;
+        margin: 0 10%;
+    }
 }
