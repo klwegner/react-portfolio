@@ -54,7 +54,17 @@ const EducationPage = () => {
             >
 Education            </Typography>
             <Typography variant="h5" align="center" color="#576F72" paragraph>
-              My education has been very eclectic and helped shape my flexibility as a developer today. Studying English taught me how to communicate effectively and efficiently; studying coding taught me how to craft the apps and integrations I do today!
+              My education has been very eclectic and helped shape my flexibility as a developer today. 
+              <br/>
+              <br/>
+
+              
+              Studying English taught me how to communicate effectively and efficiently. 
+              <br/>
+              <br/>
+
+
+              Studying coding taught me how to craft the apps and integrations I do today!
             </Typography>
           </Container>
         </Box>
@@ -69,7 +79,15 @@ Education            </Typography>
   </ListItem>
   <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>In progress</ul></Typography>
 
-  <Typography variant="h5"><ul> Programming Logic, Java, AI</ul></Typography>
+  <Typography variant="h5"><ul> Programming Logic
+  <br/>
+ Java
+ <br/>
+ AI
+ <br/>
+ Python
+ <br/>
+ Web Development</ul></Typography>
 
   <Divider variant="inset" component="li" />
 
@@ -89,7 +107,17 @@ Education            </Typography>
   </ListItem>
   <Typography variant="h5" sx={{ fontStyle: 'italic' }}><ul>Completed Aug. 2022</ul></Typography>
 
-  <Typography variant="h5"> <ul> React, Node, Express, MongoDB, HTML, CSS</ul></Typography>
+  <Typography variant="h5"> <ul> React
+  <br/>
+ Node
+ <br/>
+ Express
+ <br/>
+ MongoDB
+ <br/>
+ HTML
+ <br/>
+ CSS</ul></Typography>
 
   <Divider variant="inset" component="li" />
   <ListItem>

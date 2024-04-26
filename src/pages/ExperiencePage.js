@@ -58,7 +58,8 @@ const ExperiencePage = () => {
             >
 Experience            </Typography>
             <Typography variant="h5" align="center" color="#576F72" paragraph>
-              My education has been very eclectic and helped shape my flexibility as a developer today. Studying English taught me how to communicate effectively and efficiently; studying coding taught me how to craft the apps and integrations I do today!
+Since Decemeber of 2022, <br/>I've been enveloped in the world of web development and integrations. Take a look at my experience below for more details.
+
             </Typography>
           </Container>
         </Box>

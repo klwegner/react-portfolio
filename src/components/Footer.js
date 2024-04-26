@@ -9,7 +9,7 @@ const currYear = new Date().getFullYear();
     return (
         <div className='center'>
 
-<AppBar position="fixed" color="primary" sx={{ top: 'auto', bottom: 0, bgcolor:'#7D9D9C'}}>
+<AppBar position="fixed" color="primary" sx={{height: '10vh',  top: 'auto', bottom: 0, bgcolor:'#7D9D9C'}}>
          <ContactMe/>
                  <p>Created by Kristen Wegner. Updated {currYear} </p>
         </AppBar>

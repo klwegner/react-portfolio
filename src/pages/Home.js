@@ -9,7 +9,6 @@ import realEstateApp from '../assets/realEstateApp.png';
 
 
 
-
 const Home = () => {
 
     
@@ -22,10 +21,22 @@ const Home = () => {
         flexDirection: { xs: 'column', md: 'row' },
         justifyContent: 'space-between',
         width: '90%',
-        height: '90%',
-        margin: '5%',
-        '@media (max-width:600px)': {
+        height: '100%',
+        margin: '0 5%',
+        '@media (max-width:900px)': {
           justifyContent: 'center',
+          height: 'fit-content',
+          margin: '0 5%',
+          // border: '5px solid black'
+        },
+        '@media (min-width:1325px)': {
+          justifyContent: 'center',
+          height: 'fit-content',
+          // width:'100%',
+          margin: '0 5%',
+          // border: '5px solid black',
+          maxWidth: '100%',
+          padding: 0
         },
         marginBottom: {
       xs: '25vw' // for screens smaller than 600px
@@ -43,7 +54,8 @@ const Home = () => {
               align="center"
               color="#576F72"
               sx={{fontSize: {
-          xs: 'h3.fontSize'
+          xs: 'h3.fontSize',
+          xl: 'h2.fontSize'
         }}}
             >Kristen Wegner</Typography>
          
@@ -52,9 +64,23 @@ const Home = () => {
          align="center" 
          color="#576F72" 
          paragraph 
-         sx={{marginBottom:0}}>Full-Stack Web Developer</Typography>
+         sx={{marginBottom:0,
+         fontSize:{
+          xl: 'h4.fontSize'
+         }}}>Full-Stack Web Developer</Typography>
 
-         <Typography align="center" color="#576F72" paragraph>MERN & MEAN</Typography>
+<br/>
+<br/>
+
+
+         <Typography align="center" color="#576F72" paragraph sx={{fontSize:{
+          xl: 'h5.fontSize'
+         }}}>Web Developer since 2022--
+         <br/>
+working with JavaScript, Angular, and APEX at work; 
+         <br/>
+wielding React and its frameworks for fun.
+</Typography>
 
 </div>
 
@@ -66,10 +92,12 @@ const Home = () => {
               sx={{
         color: '#576F72',
         fontSize: {
-          xs: 'h4.fontSize'
+          xs: 'h4.fontSize',
+          xl: 'h2.fontSize'
                   },
       }}              gutterBottom
             >My Projects</Typography>
+            <div id="theCarousel">
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -103,8 +131,7 @@ MERN stack app to keep track of places to visit and things to do. Mobile-friendl
         </p>
       </div>
     </div>
-  </div>
-  <div class="carousel-item">
+    <div class="carousel-item">
       <img src={realEstateApp} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block opaque-block">
         <h5>Unlock Tampa Bay</h5>
@@ -125,6 +152,7 @@ MERN stack app to keep track of places to visit and things to do. Mobile-friendl
 </div>
 </div>
 {/* </div> */}
+</div>
  </Container>
     )
 }

@@ -11,12 +11,38 @@ import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import List from '@mui/material/List';
+
 
 
 
 const ContactPage = () => {
 
  const [message, setMessage] = React.useState('');
+
+
+
+ const style = {
+  py: 0,
+  width: '100%',
+  maxWidth: '90%',
+  borderRadius: 2,
+  border: '1px solid',
+  borderColor: 'divider',
+  backgroundColor: '#F0EBE3', //main color
+  };
+
+  const style2= {
+     p: 2,
+backgroundColor:'#E4DCCF', //creamish green
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    marginBottom: {
+      xs: '20vw', // for screens smaller than 600px
+      sm: '10vw', // for screens 600px and larger
+    }
+  }
 
 
   const handleSubmit = (event) => {
@@ -57,6 +83,21 @@ Feel inspired to reach out? Please do so below.             </Typography>
 </Box>
 
 
+<Container sx={{ py: 8, maxWidth:'80vw'}}>
+
+
+<Box sx={style2}>
+        
+        <List sx={style}>
+
+
+
+
+
+
+
+
+
         <form
           onSubmit={handleSubmit}
         >
@@ -74,8 +115,6 @@ Feel inspired to reach out? Please do so below.             </Typography>
           }}
         />
             
-          </div>
-          <div className="nameEmail" >
             
           <TextField
           label="Your Name"
@@ -97,9 +136,10 @@ Feel inspired to reach out? Please do so below.             </Typography>
           label="message"
           placeholder="Message"
           multiline
+          rows="5"
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          sx={{ m: 2, width: {
+          sx={{ m: 1, width: {
       xs: '80vw', // for screens smaller than 600px
       sm: '50vw' // for screens 600px and larger
     }}}
@@ -119,6 +159,18 @@ Feel inspired to reach out? Please do so below.             </Typography>
 </Button>
 </Stack>
         </form>
+
+
+
+
+
+
+
+
+
+        </List>
+        </Box>
+        </Container>
 
 </main>
     </>

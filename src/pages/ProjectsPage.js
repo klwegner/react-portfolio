@@ -14,8 +14,7 @@ import juniperTree from '../assets/theJuniperTree.png';
 import muzak from '../assets/muzak.png';
 import underTheSun from '../assets/UndertheSun.png';
 import cringe from '../assets/cringe.png';
-import realEstateAoo from '../assets/realEstateApp.png';
-
+import realEstateApp from '../assets/realEstateApp.png';
 
 
 
@@ -55,7 +54,7 @@ const cards = [
       id:5,
       name: "Unlock Tampa Bay",
       description:"A site to help people seeking housing find the best rental or property to purchase in Tampa Bay. Allows users to upload details of the property and handle image upload through Cloudinary. Users can edit and delete their own postings. This site was built with next.js, styled with Chakra-UI, and hosted on Vercel (front-end) and Render (back-end)." ,
-      imgSrc: realEstateAoo,
+      imageSrc: realEstateApp,
       link: "https://real-estate-app-project-v2-i2wr6gn2r-klwegners-projects.vercel.app/"
    }
 ]
@@ -71,7 +70,7 @@ const ProjectsPage = () => {
           sx={{
             bgcolor: '#E4DCCF',
             pt: 8,
-            pb: 6,
+            pb: 6
           }}
         >
           <Container maxWidth="sm">
@@ -86,11 +85,11 @@ My Projects
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph
                     sx={{
-        display: { xs: 'none'}
+        display: { xs: 'none', xl:'flex'}
       }}
             >
-              JavaScript is my first language, and the one used in these projects. 
-              You will find that several utilize React and various libraries for styling.
+              JavaScript is my first language, and the one used in these projects. <br/> <br/>
+              You will find that several utilize React/React frameworks and the various libraries for styling.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -113,12 +112,13 @@ My Projects
 
         {/* START CARDS */}
 
-        <Container sx={{ py: 8,     marginBottom: {
+        <Container sx={{ py: 8,
+            marginBottom: {
       xs: '20vw', // for screens smaller than 600px
       sm: '10vw', // for screens 600px and larger
-    }}} maxWidth="md">
+    }}} maxWidth="false">
           {/* End hero unit */}
-          <Grid container spacing={4}>
+          <Grid container spacing={4} sx={{marginBottom:{xs: '15vw',xl:'5vw'}}}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card

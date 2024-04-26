@@ -50,8 +50,11 @@ const Navbar = () => {
 
 return (
   <AppBar position="static" sx={{bgcolor:'#7D9D9C'}}>
-    <Container maxWidth="xl" >
-      <Toolbar disableGutters>
+    <Container maxWidth="100%" sx={{display:'flex'}} >
+    <Toolbar disableGutters sx={{ display: 'flex', width: '100vw', margin: 0, justifyContent: 'space-between'}}>
+
+    {/* shown at large size */}
+
         <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
         <Typography
           variant="h6"
@@ -59,7 +62,7 @@ return (
           component="a"
           href='/'
           sx={{
-            mr: 2,
+       mr:0,
             display: { xs: 'none', md: 'flex' },
             // fontFamily: 'monospace',
             fontWeight: 700,
@@ -72,8 +75,9 @@ return (
         </Typography>
         <CodeOffIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
+{/* hidden at large size */}
 
-        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+        <Box sx={{ border: '2px solid black', display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
             aria-label="account of current user"
@@ -81,6 +85,7 @@ return (
             aria-haspopup="true"
              onClick={handleOpenNavMenu}
             color="inherit"
+            sx={{margin:0}}
           >
             <MenuIcon />
           </IconButton>
@@ -111,6 +116,9 @@ return (
             ))}
           </Menu>
         </Box>
+        
+        {/* also hidden at large size */}
+
         <CodeIcon sx={{ display: 'none', mr: 1 }} />
         <Typography
           variant="h5"
@@ -120,20 +128,21 @@ return (
           sx={{
             mr: 2,
             display: { xs: 'flex', md: 'none' },
-            flexGrow: 1,
+            // flexGrow: 1,
             fontFamily: 'monospace',
             fontWeight: 700,
             letterSpacing: '.3rem',
             color: 'inherit',
             textDecoration: 'none',
+            width:'fit-content'
           }}
         >
           Kristen Wegner
         </Typography>
         <CodeOffIcon sx={{ display: 'none', mr: 1 }} />
 
-
-        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+{/* shown at large size */}
+        <Box sx={{ flexGrow: 1, justifyContent:'flex-end', display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
             <Link to={page.linkTo}>
 
