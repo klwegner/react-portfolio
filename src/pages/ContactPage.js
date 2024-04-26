@@ -87,7 +87,8 @@ const ContactPage = () => {
                       m: 1,
                       width: {
                         xs: "50vw", // for screens smaller than 600px
-                        md: "25vw", // for screens 600px and larger
+                        // sm:'50vw',
+                        md: "50%", // for screens 600px and larger
                       },
                     }}
                     InputProps={{
@@ -98,13 +99,14 @@ const ContactPage = () => {
                   />
 
                   <TextField
-                    label="Your Name"
+                    label="Your Email"
                     id="outlined-start-adornment"
                     sx={{
                       m: 1,
                       width: {
                         xs: "50vw", // for screens smaller than 600px
-                        md: "25vw", // for screens 600px and larger
+                        // sm:'50vw',
+                        md: "50%", // for screens 600px and larger
                       },
                     }}
                     InputProps={{
@@ -125,7 +127,7 @@ const ContactPage = () => {
                     onChange={(event) => setMessage(event.target.value)}
                     sx={{
                       m: 1,
-                      width: '50vw'
+                      width: {md: '100%', sm:'50vw', xs: '50vw'}
                     }}
                   />
                 </div>
@@ -143,13 +145,14 @@ const ContactPage = () => {
                     endIcon={<SendIcon />}
                     type="submit"
                     name="submit"
+                    // sx={{p:'5px 15px'}}
                   >
                     Send
                   </Button>
 
                   <Button
                     variant="outlined"
-                    startIcon={<DeleteIcon />}
+                    // startIcon={<DeleteIcon />}
                     type="reset"
                     name="reset"
                     onClick={() => setMessage("")}

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    /* width:'auto' */
 }
 
 
@@ -14,12 +15,13 @@ flex-direction: column;
 justify-content: center;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:900px) {
 .nameEmail{
     margin: 1em 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
