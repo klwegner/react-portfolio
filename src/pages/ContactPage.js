@@ -135,7 +135,8 @@ const ContactPage = () => {
                   spacing={2}
                   justifyContent="center"
                   sx={{
-                    m: 2                  }}
+                    m: 2,
+                    p: 0                  }}
                 >
                   <Button
                     variant="contained"
