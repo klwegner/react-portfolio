@@ -75,7 +75,7 @@ let subjectLine = "Let's Connect!"
       color="#576F72"
       gutterBottom
     >
-For Questions, Queries, and Interest           
+Queries/Interest          
  </Typography>
     <Typography variant="h5" align="center" color="#576F72" paragraph>
 Feel inspired to reach out? Please do so below.             </Typography>

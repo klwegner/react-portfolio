@@ -54,17 +54,8 @@ const EducationPage = () => {
             >
 Education            </Typography>
             <Typography variant="h5" align="center" color="#576F72" paragraph>
-              My education has been very eclectic and helped shape my flexibility as a developer today. 
-              <br/>
-              <br/>
+              My eclectic education has shaped my flexibility as a developer today: skilled in communication and adept in crafting applications and integrations. 
 
-              
-              Studying English taught me how to communicate effectively and efficiently. 
-              <br/>
-              <br/>
-
-
-              Studying coding taught me how to craft the apps and integrations I do today!
             </Typography>
           </Container>
         </Box>
