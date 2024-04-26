@@ -51,7 +51,7 @@ const Navbar = () => {
 return (
   <AppBar position="static" sx={{bgcolor:'#7D9D9C'}}>
     <Container maxWidth="100%" sx={{display:'flex'}} >
-    <Toolbar disableGutters sx={{ display: 'flex', width: '100vw', margin: 0, justifyContent: 'space-between'}}>
+    <Toolbar disableGutters sx={{ display: 'flex', width: '100vw', marginRight: '3vw', justifyContent: 'space-between'}}>
 
     {/* shown at large size */}
 
@@ -69,6 +69,7 @@ return (
             letterSpacing: '.3rem',
             color: 'inherit',
             textDecoration: 'none',
+            marginRight:2
           }}
         >
           Kristen Wegner
@@ -77,7 +78,7 @@ return (
 
 {/* hidden at large size */}
 
-        <Box sx={{ border: '2px solid black', display: { xs: 'flex', md: 'none' } }}>
+        <Box sx={{display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
             aria-label="account of current user"
